@@ -1,0 +1,20 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model PublishedImage {
+  id        Int      @id @default(autoincrement())
+  imageUrl  String   @map("image_url")
+  prompt    String
+  hearts    Int      @default(0)
+  createdAt DateTime @default(now()) @map("created_at")
+  userId    String   @map("user_id")
+  userName  String?  @map("user_name")
+
+  @@map("published_images")
+}
