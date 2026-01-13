@@ -4,7 +4,13 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @map("user_id")
+  email     String   @unique
+  displayName String?
+  images    PublishedImage[]
 }
 
 model PublishedImage {
@@ -14,6 +20,7 @@ model PublishedImage {
   hearts    Int      @default(0)
   createdAt DateTime @default(now()) @map("created_at")
   userId    String   @map("user_id")
+  user      User     @relation(fields: [userId], references: [id])
   userName  String?  @map("user_name")
 
   @@map("published_images")

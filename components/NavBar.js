@@ -39,6 +39,17 @@ export default function NavBar() {
             <span className="text-xs text-gray-500 mt-1">Chat</span>
           </a>
         </li>
+        <li>
+          <a href="/my-images" className="group flex flex-col items-center">
+            <span className="rounded-full p-3 group-hover:bg-gray-200 transition">
+              {/* My Images Icon */}
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-gray-700">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15M4.5 4.5h15v15h-15v-15z" />
+              </svg>
+            </span>
+            <span className="text-xs text-gray-500 mt-1">My Images</span>
+          </a>
+        </li>
       </ul>
       <div className="flex items-center gap-4 ml-auto">
         {user && (

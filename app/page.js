@@ -105,27 +105,12 @@ export default function GeneratePage() {
       <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 py-12 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8">
-            <div className="flex justify-between items-center mb-4">
-              <div>
-                <h1 className="text-4xl font-bold text-gray-900 mb-2">
-                  AI Image Generator
-                </h1>
-                <p className="text-gray-600">
-                  Create amazing images with DALL·E 2
-                </p>
-              </div>
-              <div className="flex items-center gap-4">
-                <span className="text-gray-600">
-                  {user.displayName || user.email}
-                </span>
-                <button
-                  onClick={logout}
-                  className="bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
-                >
-                  Logout
-                </button>
-              </div>
-            </div>
+            <h1 className="text-4xl font-bold text-gray-900 mb-2">
+              AI Image Generator
+            </h1>
+            <p className="text-gray-600">
+              Create amazing images with DALL·E 2
+            </p>
             <Link
               href="/feed"
               className="inline-block mt-4 text-blue-600 hover:text-blue-800 font-medium"
